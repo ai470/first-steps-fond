@@ -594,27 +594,31 @@
     }
 
     .contrast-divider {
-      width: 40px;
+      width: 48px;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 0;
-      position: relative;
     }
-    .contrast-divider-line {
-      width: 1px;
-      flex: 1;
-      background: linear-gradient(to bottom, rgba(224,120,32,0.3), rgba(98,232,163,0.3));
-      min-height: 20px;
-    }
-    .contrast-icon {
-      width: 28px;
-      height: 28px;
+    .contrast-arrow {
+      width: 32px;
+      height: 32px;
+      color: rgba(255,255,255,0.25);
       flex-shrink: 0;
     }
-    .contrast-icon.cross { color: var(--coral-light); }
-    .contrast-icon.check { color: #62E8A3; }
+    .contrast-icon-badge {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+    }
+    .contrast-side-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .contrast-side-header .contrast-side-title {
+      margin-bottom: 0;
+    }
 
     .conscious-image-bottom-wrap {
       display: flex;
@@ -638,15 +642,9 @@
       .contrast-divider {
         width: 100%;
         height: 40px;
-        flex-direction: row;
-        gap: 0;
       }
-      .contrast-divider-line {
-        width: 100%;
-        height: 1px;
-        flex: 1;
-        min-width: 20px;
-        background: linear-gradient(to right, rgba(224,120,32,0.3), rgba(98,232,163,0.3));
+      .contrast-arrow {
+        transform: rotate(90deg);
       }
     }
 
@@ -1494,19 +1492,23 @@
       <!-- Карточка 1 -->
       <div class="contrast-card fade-in">
         <div class="contrast-side bad">
-          <div class="contrast-side-title">Как делать НЕ надо</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+            <div class="contrast-side-title">Как делать НЕ надо</div>
+          </div>
           <h3 class="contrast-title">Покупать актив, потому что его все бурно обсуждают в чатах</h3>
           <p class="contrast-desc">
             У человека, который советует акцию в чате, могут быть совершенно другие инвестиционные цели, другой срок, другой доход и другой болевой порог. То, что идеально подходит ему — может быть лишним для вас.
           </p>
         </div>
         <div class="contrast-divider">
-          <svg class="contrast-icon cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
-          <div class="contrast-divider-line"></div>
-          <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+          <svg class="contrast-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
         <div class="contrast-side good">
-          <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="#62E8A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+            <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          </div>
           <h3 class="contrast-title">Спросить себя: решает ли этот актив лично мою задачу?</h3>
           <p class="contrast-desc">
             Каждая покупка должна совершаться исключительно под ваши личные цели. Если инструмент не решает вашу конкретную задачу, его обсуждение в сети не имеет для вас значения.
@@ -1517,19 +1519,23 @@
       <!-- Карточка 2 -->
       <div class="contrast-card fade-in">
         <div class="contrast-side bad">
-          <div class="contrast-side-title">Как делать НЕ надо</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+            <div class="contrast-side-title">Как делать НЕ надо</div>
+          </div>
           <h3 class="contrast-title">Сравнивать свой старт с чужим прогрессом и чужими успехами</h3>
           <p class="contrast-desc">
             Когда вы смотрите на других, вы видите лишь фасад: кто-то уже хвастается покупкой облигаций, кто-то считает гипотетический капитал, а кто-то увлеченно спорит о дивидендах.
           </p>
         </div>
         <div class="contrast-divider">
-          <svg class="contrast-icon cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
-          <div class="contrast-divider-line"></div>
-          <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+          <svg class="contrast-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
         <div class="contrast-side good">
-          <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="#62E8A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+            <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          </div>
           <h3 class="contrast-title">Всегда держать фокус исключительно на своей задаче</h3>
           <p class="contrast-desc">
             Это их путь и их личный темп. Ваш путь начинается с ваших целей, вашего стартового капитала и вашего психологического комфорта, а не с оглядки на чужую скорость.
@@ -1540,19 +1546,23 @@
       <!-- Карточка 3 -->
       <div class="contrast-card fade-in">
         <div class="contrast-side bad">
-          <div class="contrast-side-title">Как делать НЕ надо</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+            <div class="contrast-side-title">Как делать НЕ надо</div>
+          </div>
           <h3 class="contrast-title">Пытаться собрать «идеальный портфель» с первого же дня</h3>
           <p class="contrast-desc">
             Стремление сразу купить много разных сложных инструментов для диверсификации часто приводит к путанице. Вы получаете хаотичное нагромождение активов.
           </p>
         </div>
         <div class="contrast-divider">
-          <svg class="contrast-icon cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
-          <div class="contrast-divider-line"></div>
-          <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+          <svg class="contrast-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
         <div class="contrast-side good">
-          <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="#62E8A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+            <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          </div>
           <h3 class="contrast-title">Начать с понятной и строгой инвестиционной логики</h3>
           <p class="contrast-desc">
             Гораздо лучше купить один-единственный инструмент, абсолютно точно понимая его роль, чем пять инструментов, не понимая, зачем они рядом. <em>Простота на старте — это зрелость.</em>
@@ -1563,19 +1573,23 @@
       <!-- Карточка 4 -->
       <div class="contrast-card fade-in">
         <div class="contrast-side bad">
-          <div class="contrast-side-title">Как делать НЕ надо</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="var(--coral-light)" stroke-width="3" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
+            <div class="contrast-side-title">Как делать НЕ надо</div>
+          </div>
           <h3 class="contrast-title">Эмоционально реагировать на каждую горячую новость</h3>
           <p class="contrast-desc">
             Рыночный шум бесконечен. Если дёргаться на каждый аналитический прогноз или новостной заголовок, вы быстро выгорите и совершите массу необдуманных сделок.
           </p>
         </div>
         <div class="contrast-divider">
-          <svg class="contrast-icon cross" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M6 6l12 12M18 6l-12 12"/></svg>
-          <div class="contrast-divider-line"></div>
-          <svg class="contrast-icon check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+          <svg class="contrast-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </div>
         <div class="contrast-side good">
-          <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          <div class="contrast-side-header">
+            <svg class="contrast-icon-badge" viewBox="0 0 24 24" fill="none" stroke="#62E8A3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l6 6 10-10"/></svg>
+            <div class="contrast-side-title">Как действовать ОСОЗНАННО</div>
+          </div>
           <h3 class="contrast-title">Хладнокровно проверять: касается ли это моей стратегии?</h3>
           <p class="contrast-desc">
             Новости будут всегда, но если у вас есть своя личная выверенная система — вы перестаете хаотично реагировать на внешние сигналы. Вы четко знаете, зачем вы здесь.
